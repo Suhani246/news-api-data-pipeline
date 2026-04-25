@@ -1,93 +1,76 @@
-# news-api-data-pipeline
-End-to-end data pipeline that extracts news from an API, processes it using Pandas, and stores it in MySQL with automated scheduling.
-
+News API Data Pipeline
 Overview
 
-This project is an automated data pipeline that fetches real-time news data from an external API, processes and cleans the data using Python, and prepares it for downstream analytics and visualization. It simulates a real-world ETL (Extract, Transform, Load) workflow commonly used in data engineering and analytics systems.
+This project is an automated data pipeline that extracts real-time news data from an external API, processes and cleans the data using Python, and prepares it for analysis and visualization. It follows a standard ETL (Extract, Transform, Load) workflow commonly used in data engineering systems.
 
-Key Features
-
-Automated extraction of real-time news data from API
-Data cleaning and transformation using Pandas
-Robust error handling for API failures and missing data
-Scheduled execution support for continuous data updates
-Structured pipeline design (modular ETL workflow)
-Ready for analytics and dashboard integration (Power BI / Tableau)
-
+Features
+Fetches real-time news data from an API
+Cleans and transforms raw data using Python and Pandas
+Handles API errors and missing data gracefully
+Modular pipeline structure for scalability
+Can be extended for scheduling and automation
+Ready for integration with Power BI or other visualization tools
 Project Architecture
 
 News API
-   ↓
-Extract (API Request - Python Requests)
-   ↓
-Transform (Pandas Data Cleaning & Formatting)
-   ↓
-Load (CSV / Database-ready output)
-   ↓
-Analytics / Visualization (Power BI - upcoming)
-
+→ Extract data using Python requests
+→ Transform and clean data using Pandas
+→ Load processed data into file or database
+→ Use data for analytics and dashboards
 
 Tech Stack
+Python
+Pandas
+Requests
+dotenv
+Git and GitHub
+Project Structure
 
-Python 
-Pandas 
-Requests 
-Dotenv 
-Git & GitHub 
+News API Pipeline
+extract.py (fetches data from API)
+transform.py (cleans and processes data)
+load.py (stores processed data)
+pipeline.py (main script to run full workflow)
+.env (stores API key)
+requirements.txt (dependencies)
+README.md
 
-📂 Project Structure
+How to Run the Project
 
-News API Pipeline/
-│
-├── extract.py        # Fetches data from News API
-├── transform.py      # Cleans and processes raw data
-├── load.py           # Stores processed data
-├── pipeline.py       # Main pipeline execution file
-├── .env              # API keys (not pushed to GitHub)
-├── requirements.txt  # Dependencies
-└── README.md
-
-How to Run This Project
-
-1. Clone the repository
+Step 1: Clone the repository
 git clone https://github.com/Suhani246/news-api-data-pipeline.git
+
 cd news-api-data-pipeline
 
-2. Create virtual environment
+Step 2: Create virtual environment
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate
 
-3. Install dependencies
+Step 3: Install dependencies
 pip install -r requirements.txt
 
-4.Add environment variables
-Create a .env file:
+Step 4: Add API key
+Create a .env file and add
 API_KEY=your_api_key_here
 
-5. Run the pipeline
+Step 5: Run the pipeline
 python pipeline.py
 
 Output
-
-Cleaned and structured news dataset
-Ready for analytics, dashboards, or storage systems
-Can be extended for Power BI or database integration
-
+Clean structured dataset from news API
+Processed data ready for analytics
+Can be used for dashboards and reporting
 Error Handling
-
-The pipeline includes:
-API timeout handling
-Missing or null data checks
-Safe transformation steps to prevent crashes
+Handles API request failures
+Manages missing or null data
+Ensures safe execution of pipeline steps
 Future Improvements
 Power BI dashboard integration
-Database storage (MySQL)
-Advanced scheduling with Airflow or Cron jobs
-Cloud deployment (AWS / Azure)
-Multi-source news aggregation
+Database storage using MySQL 
+Multi-source news data integration
+
 
 Author
-
 Suhani Avadia
 Master’s in Applied Computing
-Focused on Data Analytics & Data Engineering
+Focus: Data Analytics and Data Engineering
