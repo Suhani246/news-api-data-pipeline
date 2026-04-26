@@ -26,6 +26,5 @@ def analyze_data():
     print(df['source'].value_counts().head(5))
 
 
-# 🔥 THIS LINE WAS MISSING
 if __name__ == "__main__":
     analyze_data()
