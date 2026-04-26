@@ -1,76 +1,95 @@
-News API Data Pipeline
-Overview
+# News API Data Pipeline
 
-This project is an automated data pipeline that extracts real-time news data from an external API, processes and cleans the data using Python, and prepares it for analysis and visualization. It follows a standard ETL (Extract, Transform, Load) workflow commonly used in data engineering systems.
+## Overview
+This project is an automated data pipeline that extracts real-time news data from an external API, processes and cleans the data using Python, and prepares it for analysis and visualization. It follows a standard ETL (Extract, Transform, Load) workflow used in data engineering.
 
-Features
-Fetches real-time news data from an API
-Cleans and transforms raw data using Python and Pandas
-Handles API errors and missing data gracefully
-Modular pipeline structure for scalability
-Can be extended for scheduling and automation
-Ready for integration with Power BI or other visualization tools
-Project Architecture
+---
 
-News API
-→ Extract data using Python requests
-→ Transform and clean data using Pandas
-→ Load processed data into file or database
-→ Use data for analytics and dashboards
+## Features
+- Fetches real-time news data from an API
+- Cleans and transforms raw data using Python and Pandas
+- Handles API errors and missing data
+- Modular ETL pipeline design
+- Ready for analytics and dashboard integration
 
-Tech Stack
-Python
-Pandas
-Requests
-dotenv
-Git and GitHub
-Project Structure
+---
 
-News API Pipeline
-extract.py (fetches data from API)
-transform.py (cleans and processes data)
-load.py (stores processed data)
-pipeline.py (main script to run full workflow)
-.env (stores API key)
-requirements.txt (dependencies)
-README.md
+## Project Architecture
 
-How to Run the Project
+News API  
+→ Extract (Python Requests)  
+→ Transform (Pandas)  
+→ Load (CSV / Database)  
+→ Analytics / Visualization  
 
-Step 1: Clone the repository
-git clone https://github.com/Suhani246/news-api-data-pipeline.git
+---
 
-cd news-api-data-pipeline
+## Tech Stack
+- Python
+- Pandas
+- Requests
+- python-dotenv
+- Git and GitHub
 
-Step 2: Create virtual environment
-python -m venv venv
-venv\Scripts\activate
+---
 
-Step 3: Install dependencies
-pip install -r requirements.txt
+## Project Structure
 
-Step 4: Add API key
-Create a .env file and add
-API_KEY=your_api_key_here
+news-api-data-pipeline/
+- extract.py
+- transform.py
+- load.py
+- pipeline.py
+- requirements.txt
+- .env
+- README.md
 
-Step 5: Run the pipeline
-python pipeline.py
+---
 
-Output
-Clean structured dataset from news API
-Processed data ready for analytics
-Can be used for dashboards and reporting
-Error Handling
-Handles API request failures
-Manages missing or null data
-Ensures safe execution of pipeline steps
-Future Improvements
-Power BI dashboard integration
-Database storage using MySQL 
-Multi-source news data integration
+## How to Run the Project
 
+### 1. Clone the repository
+git clone https://github.com/Suhani246/news-api-data-pipeline.git  
+cd news-api-data-pipeline  
 
-Author
-Suhani Avadia
-Master’s in Applied Computing
+### 2. Create virtual environment
+python -m venv venv  
+venv\Scripts\activate  
+
+### 3. Install dependencies
+pip install -r requirements.txt  
+
+### 4. Add API Key
+Create a .env file and add:  
+API_KEY=your_api_key_here  
+
+### 5. Run the pipeline
+python pipeline.py  
+
+---
+
+## Output
+- Clean structured dataset from news API
+- Data ready for analysis and dashboards
+
+---
+
+## Error Handling
+- Handles API request failures
+- Manages missing or null data
+- Ensures stable pipeline execution
+
+---
+
+## Future Improvements
+- Power BI dashboard integration
+- Database storage (MySQL/ PostgreSQL)
+- Pipeline scheduling (Airflow / Cron)
+- Multi-source news aggregation
+
+---
+
+## Author
+Suhani Avadia  
+Master’s in Applied Computing  
 Focus: Data Analytics and Data Engineering
